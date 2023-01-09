@@ -3,7 +3,7 @@ import { fetchTrendingMovie } from '../../services/fetchMovie';
 import { TrendingList } from '../../components/TrendingList/TrendingList';
 import { List, Title } from './Home.styled';
 
-export const Home = () => {
+const Home = () => {
   const [trending, setTrending] = useState([]);
   useEffect(() => {
     async function getPopularMovie() {
@@ -22,3 +22,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

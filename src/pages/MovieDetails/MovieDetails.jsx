@@ -13,7 +13,7 @@ import {
   Item,
 } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
@@ -30,8 +30,6 @@ export const MovieDetails = () => {
   if (!movie) {
     return null;
   }
-
-  console.log(movie);
 
   const { original_title, release_date, overview, poster_path, vote_average } =
     movie;
@@ -92,3 +90,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

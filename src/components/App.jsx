@@ -3,46 +3,11 @@ import { lazy } from 'react';
 import { SharedLayout } from './SharedLayout /SharedLayout';
 import { ToastContainer } from 'react-toastify';
 
-const Home = lazy(() =>
-  import('../pages/Home/Home').then(module => {
-    return {
-      ...module,
-      default: module.Home,
-    };
-  })
-);
-const Movies = lazy(() =>
-  import('../pages/Movies/Movies').then(module => {
-    return {
-      ...module,
-      default: module.Movies,
-    };
-  })
-);
-const MovieDetails = lazy(() =>
-  import('../pages/MovieDetails/MovieDetails').then(module => {
-    return {
-      ...module,
-      default: module.MovieDetails,
-    };
-  })
-);
-const Cast = lazy(() =>
-  import('./Cast/Cast').then(module => {
-    return {
-      ...module,
-      default: module.Cast,
-    };
-  })
-);
-const Reviews = lazy(() =>
-  import('./Reviews/Reviews').then(module => {
-    return {
-      ...module,
-      default: module.Reviews,
-    };
-  })
-);
+const Home = lazy(() => import('../pages/Home/Home'));
+const Movies = lazy(() => import('../pages/Movies/Movies'));
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (

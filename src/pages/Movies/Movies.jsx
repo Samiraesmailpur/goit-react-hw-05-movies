@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { Form, Input, Btn } from './Movies.styled';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setSearchQuery] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -65,3 +65,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

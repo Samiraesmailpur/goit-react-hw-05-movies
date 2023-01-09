@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchCredits } from 'services/fetchMovie';
 import PropTypes from 'prop-types';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
 
@@ -50,3 +50,5 @@ Cast.propTypes = {
     })
   ),
 };
+
+export default Cast;
