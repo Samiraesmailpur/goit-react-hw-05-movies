@@ -1,36 +1,72 @@
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
+const BackLink = styled(Link)`
+  color: #000;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100px;
+`;
+
+const Title = styled.h2`
+  font-size: 25px;
+`;
+
+const Subtitle = styled.p`
+  font-size: 20px;
+`;
+
+const MovieContainer = styled.div`
+  display: flex;
+
+`;
+
+const About = styled.div`
+  color: #fff;
+  margin-left: 30px;
+`;
+
+const LinkItem = styled(NavLink)`
+  color: #fff;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 14px;
+  display: block;
+  max-width: 60px;
+  width: 100%;
+  text-align: center;
+  transition: 300ms;
+
+  :hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &.active {
+    background-color: #fff;
+    color: #000;
+  }
+`;
 
 const List = styled.ul`
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 
 const Item = styled.li`
-  display: flex;
-  transition: 1s;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-    rgba(0, 0, 0, 0.05) 0px 5px 10px;
-
-  :hover {
-    transform: scale(1.05);
-  }
-  width: 300px;
-
-  a {
-    background-color: #000;
-  }
-
-  img {
-    display: block;
-  }
+  margin: 20px;
 `;
-
-const Names = styled.p`
-  text-align: center;
-  color: #fff;
-  padding: 15px;
-`;
-
-export { Item, Names, List };
+export {
+  BackLink,
+  MovieContainer,
+  About,
+  Title,
+  Subtitle,
+  LinkItem,
+  List,
+  Item,
+};

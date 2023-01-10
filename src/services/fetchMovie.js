@@ -38,10 +38,18 @@ async function fetchReviews(id) {
   return data.results;
 }
 
+async function fetchVideos(id) {
+  const response = await fetch(`${URL_BY_ID}${id}/videos?api_key=${API_KEY}`);
+  const data = await response.json();
+  console.log(response);
+  return data.results;
+}
+
 export {
   fetchTrendingMovie,
   fetchMovies,
   fetchMovieById,
   fetchCredits,
   fetchReviews,
+  fetchVideos,
 };
